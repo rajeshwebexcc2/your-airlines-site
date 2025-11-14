@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Airlines — Comfort, Safety, Service</title>
+  <meta name="description" content="Discover exceptional comfort, safety, and service with Your Airlines." />
+  <style>
+    /* Simple, modern responsive styling */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071021 0%, #071826 100%);
+      color: #e6eef6;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.4;
+      padding-bottom:80px;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-weight:700;letter-spacing:1px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:22px;
+      align-items:center;
+      margin:28px 0 40px;
+      padding:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+    }
+    .hero h1{margin:0;font-size:32px;line-height:1.05}
+    .hero p{color:var(--muted);margin:8px 0 0;}
+    .cta-row{display:flex;gap:12px;margin-top:14px}
+    .btn{
+      background:var(--accent);
+      color:#042027;
+      border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
+      box-shadow:0 6px 18px rgba(6,182,212,0.14);
+    }
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .card{background:var(--card);padding:18px;border-radius:12px;min-height:170px}
+    .card h3{margin:8px 0 6px}
+    .card p{color:var(--muted);font-size:14px;margin:0}
+    .img-placeholder{
+      width:100%;height:110px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;
+    }
+    .subscribe{
+      margin-top:34px;padding:18px;background:var(--glass);border-radius:12px;display:flex;gap:10px;align-items:center;
+      flex-wrap:wrap;
+    }
+    .subscribe input[type="email"]{
+      flex:1;min-width:220px;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;
+    }
+    footer{margin-top:44px;color:var(--muted);font-size:13px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.02)}
+    /* cookie banner */
+    .cookie-banner{
+      position:fixed;left:20px;right:20px;bottom:20px;background:linear-gradient(180deg,#06101a,#081420);
+      padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);z-index:999;
+    }
+    .cookie-banner p{margin:0;color:var(--muted);font-size:13px}
+    .cookie-banner button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 10px;border-radius:8px}
+    /* responsive */
+    @media (max-width:900px){
+      .features{grid-template-columns:1fr}
+      .hero{padding:18px}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">YOUR AIRLINES</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Support</a>
+        <a href="#">More</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" role="region" aria-label="Hero">
+        <div>
+          <h1>Discover exceptional comfort, safety, and service with Your Airlines</h1>
+          <p>Fly with confidence—Your Airlines ensures comfort, safety, and customer satisfaction on every journey.</p>
+          <div class="cta-row">
+            <button class="btn" onclick="alert('Reserve flow placeholder')">Book a Flight</button>
+            <button class="btn" style="background:transparent;color:var(--accent);border:1px solid rgba(6,182,212,0.12)" onclick="alert('Support placeholder')">Support</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" aria-label="Features">
+        <article class="card">
+          <div class="img-placeholder">Image — Modern Comfort</div>
+          <h3>Modern Comfort Throughout Your Journey</h3>
+          <p>Your Airlines is committed to providing a comfortable travel experience for every passenger with thoughtfully designed seating and in-flight amenities.</p>
+        </article>
+
+        <article class="card">
+          <div class="img-placeholder">Image — Safety First</div>
+          <h3>Prioritizing Your Safety, Always</h3>
+          <p>Safety is our unwavering priority. Experienced professionals, a modern fleet, and strict maintenance standards keep you secure.</p>
+        </article>
+
+        <article class="card">
+          <div class="img-placeholder">Image — Customer Care</div>
+          <h3>Focused on Customer Satisfaction</h3>
+          <p>From booking to arrival, our team is dedicated to delivering exceptional service and making your experience seamless.</p>
+        </article>
+      </section>
+
+      <section class="subscribe" aria-label="Subscribe">
+        <div style="flex:1">
+          <strong>Stay Informed with Updates from Your Airlines</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Subscribe to receive the latest news, exclusive offers, and travel updates.</div>
+        </div>
+        <form id="subscribeForm" onsubmit="subscribe(event)" style="display:flex;gap:8px;align-items:center;">
+          <input id="email" type="email" placeholder="Email address" required />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <footer>
+        <div>Copyright © <span id="year"></span> YOUR AIRLINES - All Rights Reserved.</div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- cookie banner -->
+  <div id="cookie" class="cookie-banner" role="dialog" aria-live="polite" style="display:none">
+    <p>We use cookies to analyze website traffic and optimize your experience. By accepting, your data will be aggregated.</p>
+    <div style="display:flex;gap:8px">
+      <button onclick="acceptCookies()">Accept</button>
+      <button onclick="dismissCookies()">Dismiss</button>
+    </div>
+  </div>
+
+  <script>
+    // Set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple subscribe handler (placeholder)
+    function subscribe(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email) return alert('Please enter your email.');
+      // In a real site you'd send to your backend or mailing provider.
+      alert('Thanks — subscription saved (demo).');
+      e.target.reset();
+    }
+
+    // Cookie banner logic (basic)
+    function showCookieBanner(){
+      if(!localStorage.getItem('cookiesAccepted')){
+        document.getElementById('cookie').style.display = 'flex';
+      }
+    }
+    function acceptCookies(){
+      localStorage.setItem('cookiesAccepted','1');
+      document.getElementById('cookie').style.display = 'none';
+    }
+    function dismissCookies(){
+      document.getElementById('cookie').style.display = 'none';
+    }
+    // show after a short delay so it doesn't feel instant
+    setTimeout(showCookieBanner, 800);
+
+    // Small accessibility: allow Enter on brand to go top
+    document.querySelector('.brand').tabIndex = 0;
+    document.querySelector('.brand').addEventListener('keydown', e => { if(e.key === 'Enter') window.scrollTo({top:0,behavior:'smooth'})});
+  </script>
+</body>
+</html>
