@@ -2,84 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Airlines — Comfort, Safety, Service</title>
   <meta name="description" content="Discover exceptional comfort, safety, and service with Your Airlines." />
-  <style>
-    /* Simple, modern responsive styling */
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#06b6d4;
-      --glass: rgba(255,255,255,0.03);
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, #071021 0%, #071826 100%);
-      color: #e6eef6;
-      -webkit-font-smoothing:antialiased;
-      line-height:1.4;
-      padding-bottom:80px;
-    }
-    .container{max-width:1100px;margin:0 auto;padding:28px;}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{font-weight:700;letter-spacing:1px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-    .hero{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:22px;
-      align-items:center;
-      margin:28px 0 40px;
-      padding:28px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:14px;
-      box-shadow: 0 6px 24px rgba(2,6,23,0.6);
-    }
-    .hero h1{margin:0;font-size:32px;line-height:1.05}
-    .hero p{color:var(--muted);margin:8px 0 0;}
-    .cta-row{display:flex;gap:12px;margin-top:14px}
-    .btn{
-      background:var(--accent);
-      color:#042027;
-      border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
-      box-shadow:0 6px 18px rgba(6,182,212,0.14);
-    }
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
-    .card{background:var(--card);padding:18px;border-radius:12px;min-height:170px}
-    .card h3{margin:8px 0 6px}
-    .card p{color:var(--muted);font-size:14px;margin:0}
-    .img-placeholder{
-      width:100%;height:110px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;
-    }
-    .subscribe{
-      margin-top:34px;padding:18px;background:var(--glass);border-radius:12px;display:flex;gap:10px;align-items:center;
-      flex-wrap:wrap;
-    }
-    .subscribe input[type="email"]{
-      flex:1;min-width:220px;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;
-    }
-    footer{margin-top:44px;color:var(--muted);font-size:13px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.02)}
-    /* cookie banner */
-    .cookie-banner{
-      position:fixed;left:20px;right:20px;bottom:20px;background:linear-gradient(180deg,#06101a,#081420);
-      padding:12px 16px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;
-      box-shadow:0 10px 30px rgba(2,6,23,0.6);z-index:999;
-    }
-    .cookie-banner p{margin:0;color:var(--muted);font-size:13px}
-    .cookie-banner button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 10px;border-radius:8px}
-    /* responsive */
-    @media (max-width:900px){
-      .features{grid-template-columns:1fr}
-      .hero{padding:18px}
-      header{flex-direction:column;align-items:flex-start;gap:12px}
-    }
-  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
@@ -87,70 +15,122 @@
       <div class="brand">YOUR AIRLINES</div>
       <nav>
         <a href="#">Home</a>
-        <a href="#">Support</a>
+        <a href="#" onclick="openSupportWidget()">Support</a>
         <a href="#">More</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" role="region" aria-label="Hero">
+      <section class="hero">
         <div>
           <h1>Discover exceptional comfort, safety, and service with Your Airlines</h1>
           <p>Fly with confidence—Your Airlines ensures comfort, safety, and customer satisfaction on every journey.</p>
           <div class="cta-row">
-            <!--<button class="btn" onclick="alert('Reserve flow placeholder')">Book a Flight</button>
-            <button class="btn" style="background:transparent;color:var(--accent);border:1px solid rgba(6,182,212,0.12)" onclick="openSupportWidget()">Support</button> -->
+            <button class="btn" onclick="alert('Reserve flow placeholder')">Book a Flight</button>
+
+            <!-- Support Button -->
+            <button class="btn btn-secondary" onclick="openSupportWidget()">Support</button>
           </div>
         </div>
       </section>
 
-      <section class="features" aria-label="Features">
+      <section class="features">
         <article class="card">
           <div class="img-placeholder">Image — Modern Comfort</div>
           <h3>Modern Comfort Throughout Your Journey</h3>
-          <p>Your Airlines is committed to providing a comfortable travel experience for every passenger with thoughtfully designed seating and in-flight amenities.</p>
+          <p>Your Airlines provides a comfortable travel experience for every passenger with modern seating and in-flight amenities.</p>
         </article>
 
         <article class="card">
           <div class="img-placeholder">Image — Safety First</div>
           <h3>Prioritizing Your Safety, Always</h3>
-          <p>Safety is our unwavering priority. Experienced professionals, a modern fleet, and strict maintenance standards keep you secure.</p>
+          <p>Safety is our priority. A modern fleet and strict standards keep you secure.</p>
         </article>
 
         <article class="card">
           <div class="img-placeholder">Image — Customer Care</div>
           <h3>Focused on Customer Satisfaction</h3>
-          <p>From booking to arrival, our team is dedicated to delivering exceptional service and making your experience seamless.</p>
+          <p>From booking to arrival, our team delivers exceptional service for a seamless travel experience.</p>
         </article>
       </section>
 
-      <section class="subscribe" aria-label="Subscribe">
-        <div style="flex:1">
+      <section class="subscribe">
+        <div class="sub-left">
           <strong>Stay Informed with Updates from Your Airlines</strong>
-          <div style="color:var(--muted);font-size:13px;margin-top:6px">Subscribe to receive the latest news, exclusive offers, and travel updates.</div>
+          <div class="sub-text">Subscribe for the latest news, offers, and updates.</div>
         </div>
-        <form id="subscribeForm" onsubmit="subscribe(event)" style="display:flex;gap:8px;align-items:center;">
+        <form onsubmit="subscribe(event)" class="sub-form">
           <input id="email" type="email" placeholder="Email address" required />
           <button class="btn" type="submit">Subscribe</button>
         </form>
       </section>
 
       <footer>
-        <div>Copyright © <span id="year"></span> YOUR AIRLINES - All Rights Reserved.</div>
+        © <span id="year"></span> YOUR AIRLINES — All Rights Reserved.
       </footer>
     </main>
   </div>
 
-  <!-- cookie banner -->
-  <div id="cookie" class="cookie-banner" role="dialog" aria-live="polite" style="display:none">
-    <p>We use cookies to analyze website traffic and optimize your experience. By accepting, your data will be aggregated.</p>
-    <div style="display:flex;gap:8px">
-      <button onclick="acceptCookies()">Accept</button>
-      <button onclick="dismissCookies()">Dismiss</button>
-    </div>
-  </div>
   <!-- Support Widget -->
-<div id="divicw" data-bind="CF508B70-7613-44AA-8BA3-5DF859FA1BB8" data-org=""></div><script>var i={t:function(t){var e="https://media.imi.chat/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});</script>
+  <div id="divicw" data-bind="CF508B70-7613-44AA-8BA3-5DF859FA1BB8" data-org=""></div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function subscribe(e){
+      e.preventDefault();
+      alert("Thanks — subscription saved (demo).");
+      e.target.reset();
+    }
+
+    function openSupportWidget() {
+      var t = document.getElementById("divicw");
+      if (!t.hasAttribute("data-loaded")) {
+        t.setAttribute("data-loaded", "1");
+
+        var i = {
+          t: function (t) {
+            var e = "https://media.imi.chat/widget/js/imichatinit.js";
+            try {
+              var o = new XMLHttpRequest;
+              o.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                  var t = document.getElementById("divicw");
+                  if (this.status == 0) {
+                    i.o(t);
+                    return;
+                  }
+                  var e = document.createElement("script");
+                  e.innerHTML = this.responseText;
+                  t.parentNode.insertBefore(e, t.nextSibling);
+                }
+              };
+              o.open("GET", e, true);
+              o.send();
+            } catch (s) { console.error(s); }
+          },
+          o: function (t) {
+            t.insertAdjacentHTML("afterend",
+              '<iframe id="tls_al_frm" frameborder="0" style="overflow:hidden;height:208px;width:394px;position:fixed;right:48px;bottom:12px;z-index:99999;display:none;"></iframe>'
+            );
+            var e = document.getElementById("tls_al_frm");
+            var o = e.contentWindow || (e.contentDocument.document || e.contentDocument);
+            o.document.open();
+            o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Alert</title><style>body{font-family:Arial;color:#99a0b0;font-size:14px}.popover__content{background:#fbfbfe;padding:1.5rem;border-radius:5px;width:300px;box-shadow:0 2px 5px rgba(0,0,0,.26);position:relative}.popover__message{font-weight:600;color:#56627c;font-size:16px}.close-btn{position:absolute;right:15px;top:15px}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert()">X</a></div><div class="popover__message">This browser version is not supported on LiveChat.</div><p>Please update your browser and re-open the website to use the widget.</p></div><script>function closeTLSAlert(){window.parent.postMessage({action:"close_tls_alert"},"*");}<\/script></body></html>');
+            o.document.close();
+            e.style.display = "block";
+            window.addEventListener("message", function (t) {
+              if (t.data.action == "close_tls_alert") { i.s() }
+            });
+          },
+          s: function () {
+            document.getElementById("tls_al_frm").remove();
+          }
+        };
+        i.t(function (t) { });
+      }
+    }
+  </script>
 
 </body>
 </html>
